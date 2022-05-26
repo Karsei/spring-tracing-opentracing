@@ -6,7 +6,7 @@ plugins {
 
 group = 'kr.pe.karsei'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '13'
 
 configurations {
     compileOnly {
@@ -30,6 +30,8 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
