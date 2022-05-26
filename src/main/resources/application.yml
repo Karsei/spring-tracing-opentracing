@@ -1,2 +1,5 @@
+spring:
+  application:
+    name: "spring-tracing-test-1"
 server:
   port: 7000
