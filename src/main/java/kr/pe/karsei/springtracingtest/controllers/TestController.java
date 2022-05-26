@@ -17,24 +17,20 @@ public class TestController {
 
     @GetMapping("/hello")
     public String hello() {
-        log.info("called hello method");
         return "hello, world!";
     }
 
     @GetMapping("call")
     public String call() {
-        log.info("called call method");
         String url = "http://localhost:7000/api1/hello";
 
         StringBuilder sb = new StringBuilder();
         try {
-            log.info("sending");
             sb.append(restTemplate.getForObject(url, String.class));
         }
         catch (HttpStatusCodeException e) {
             throw e;
         }
-        log.info("sending done");
 
         return String.format("call - %s", sb);
     }
